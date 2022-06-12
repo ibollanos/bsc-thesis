@@ -11,7 +11,6 @@ contract UserInterface{
     constructor() payable {}
 
     function depositEth(address _wallet) public payable{
-        require(wallets.WalletCollectionContains(_wallet),"Invalid wallet");
         walletBalance[_wallet] += msg.value;
     }
 
